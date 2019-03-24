@@ -22,13 +22,13 @@ To exclude _any_ command from history, prefix with a space. It behaves the same 
 **Antibody**
 
 ```
-antibody bundle jgogstad/passwordsless-history
+antibody bundle jgogstad/passwordless-history
 ```
 
 **Antigen**
 
 ```
-antigen bundle jgogstad/passwordsless-history
+antigen bundle jgogstad/passwordless-history
 ```
 
 **Plain zsh**
@@ -39,12 +39,13 @@ Add to `.zshrc`
 . /path/to/passwordless-history.plugin.zsh
 ```
 
-## Usage
+## Customization
 
 Default exclusion pattern is
 
 ```bash
 > echo $HISTORY_EXCLUDE_PATTERN
+password|PASSWORD|//[^/]+:[^/]+@
 ```
 
 Overwrite variable to customize
