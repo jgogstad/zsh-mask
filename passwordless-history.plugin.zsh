@@ -1,7 +1,6 @@
 # ZSH
-setopt histignorespace
 
-HISTORY_EXCLUDE_PATTERN="password|PASSWORD|//[^/]+:[^/]+@"
+HISTORY_EXCLUDE_PATTERN="^ |password|PASSWORD|//[^/]+:[^/]+@"
 
 function zshaddhistory() {
   emulate -L zsh

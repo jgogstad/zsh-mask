@@ -45,7 +45,7 @@ Default exclusion pattern is
 
 ```bash
 > echo $HISTORY_EXCLUDE_PATTERN
-password|PASSWORD|//[^/]+:[^/]+@
+^ |password|PASSWORD|//[^/]+:[^/]+@
 ```
 
 Overwrite variable to customize
