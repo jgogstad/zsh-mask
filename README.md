@@ -45,7 +45,7 @@ Default exclusion pattern is
 
 ```bash
 > echo $HISTORY_EXCLUDE_PATTERN
-^ |password|PASSWORD|//[^/]+:[^/]+@
+^ |password|//[^/]+:[^/]+@|(KEY|TOKEN|SECRET)=|Authorization:
 ```
 
 Overwrite variable to customize
@@ -53,3 +53,5 @@ Overwrite variable to customize
 ```bash
 > export HISTORY_EXCLUDE_PATTERN="^ykchalresp|$HISTORY_EXCLUDE_PATTERN"
 ```
+
+The pattern is a regex and it's evaluated with zsh's `=~` operator using case insensitive evaluation.

@@ -1,6 +1,6 @@
 # ZSH
 
-HISTORY_EXCLUDE_PATTERN="^ |password|PASSWORD|//[^/]+:[^/]+@"
+HISTORY_EXCLUDE_PATTERN="^ |password|//[^/]+:[^/]+@|(KEY|TOKEN|SECRET)=|Authorization:"
 
 function zshaddhistory() {
   emulate -L zsh
