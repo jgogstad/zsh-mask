@@ -10,9 +10,7 @@ function zshaddhistory() {
   unsetopt case_match
 
   input="${1%%$'\n'}"
-  [[ "$input" =~ "$HISTORY_EXCLUDE_PATTERN" ]]
-
-  if [[ -z "$MATCH" ]]; then
+  if ! [[ "$input" =~ "$HISTORY_EXCLUDE_PATTERN" ]]; then
     print -Sr -- "$input"
   else
     nonempty=($match)
@@ -25,7 +23,7 @@ function zshaddhistory() {
 
       print -Sr -- "$input"
     fi
-    return 1
     unset match
+    return 1
   fi
 }
