@@ -46,8 +46,10 @@ Control what secrets are catched by setting the environment variable `HISTORY_EX
 
 ```bash
 ❯ echo $HISTORY_EXCLUDE_PATTERN
-^ |//([^/]+:[^/]+)@|KEY=([^ ]+)|TOKEN=([^ ]+)|BEARER=([^ ]+)|PASSWORD=([^ ]+)|Authorization: *([^'\"]+)|-us?e?r? ([^:]+:[^:]+)
+^ |//([^/]+:[^/]+)@|KEY[=:] *([^ ]+)|TOKEN[=:] *([^ ]+)|BEARER[=:] *([^ ]+)|PASSWORD[=:] *([^ ]+)|Authorization[=:] *([^'\"]+)|-us?e?r? ([^:]+:[^:]+) 
 ```
+
+it is not case sensitive
 
 ## Installation
 
