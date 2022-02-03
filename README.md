@@ -46,7 +46,7 @@ Control what secrets are catched by setting the environment variable `HISTORY_EX
 
 ```bash
 ❯ echo $HISTORY_EXCLUDE_PATTERN
-^ |//([^/]+:[^/]+)@|KEY[=:] *([^ ]+)|TOKEN[=:] *([^ ]+)|BEARER[=:] *([^ ]+)|PASSWORD[=:] *([^ ]+)|Authorization[=:] *([^'\"]+)|-us?e?r? ([^:]+:[^:]+) 
+^ |//([^/]+:[^/]+)@|KEY[=:] *([^ ]+)|TOKEN[=:] *([^ ]+)|BEARER[=:] *([^ ]+)|PASSWO?R?D?[=:] *([^ ]+)|Authorization[=:] *([^'\"]+)|-us?e?r? ([^:]+:[^:]+) 
 ```
 
 it is not case sensitive
@@ -86,14 +86,7 @@ zplug 'jgogstad/passwordless-history'
 
 ## Customization
 
-Default exclusion pattern is
-
-```bash
-❯ echo $HISTORY_EXCLUDE_PATTERN
-^ |//([^/]+:[^/]+)@|KEY=([^ ]+)|TOKEN=([^ ]+)|BEARER=([^ ]+)|PASSWORD=([^ ]+)|Authorization: *([^'\"]+)|-us?e?r? ([^:]+:[^:]+)
-```
-
-Overwrite variable to customize
+Overwrite `HISTORY_EXCLUDE_PATTERN` to customize:
 
 ```bash
 ❯ export HISTORY_EXCLUDE_PATTERN="^ykchalresp|$HISTORY_EXCLUDE_PATTERN"

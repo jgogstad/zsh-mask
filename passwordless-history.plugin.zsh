@@ -1,6 +1,6 @@
 #!/bin/env zsh
 
-HISTORY_EXCLUDE_PATTERN='^ |//([^/]+:[^/]+)@|KEY[=:] *([^ ]+)|TOKEN[=:] *([^ ]+)|BEARER[=:] *([^ ]+)|PASSWORD[=:] *([^ ]+)|Authorization[=:] *([^'"'"'\"]+)|-us?e?r? ([^:]+:[^:]+) '
+HISTORY_EXCLUDE_PATTERN='^ |//([^/]+:[^/]+)@|KEY[=:] *([^ ]+)|TOKEN[=:] *([^ ]+)|BEARER[=:] *([^ ]+)|PASSWO?R?D?[=:] *([^ ]+)|Authorization[=:] *([^'"'"'\"]+)|-us?e?r? ([^:]+:[^:]+) '
 
 # See
 # - https://zsh.sourceforge.io/Doc/Release/Functions.html for docs on zshaddhistory
