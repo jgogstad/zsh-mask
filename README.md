@@ -1,4 +1,4 @@
-# Passwordless ZSH history
+# zsh-mask
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
@@ -9,7 +9,7 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-This ZSH plugin masks secrets in your ZSH history
+Masks secrets in your zsh history
 
 Example:
 
@@ -55,16 +55,16 @@ it is not case sensitive
 
 Using **Plain zsh**
 
-Download [passwordless-history.plugin.zsh](passwordless-history.plugin.zsh), then add to `.zshrc`
+Download [zsh-mask.zsh](zsh-mask.zsh), then add to `.zshrc`
 
 ```
-source /path/to/passwordless-history.plugin.zsh
+source /path/to/zsh-mask.zsh
 ```
 
 Using [**Antibody**](https://getantibody.github.io)
 
 ```
-antibody bundle jgogstad/passwordless-history
+antibody bundle jgogstad/zsh-mask
 ```
 
 Using [**ZInit**](https://github.com/zdharma/zinit)
@@ -72,7 +72,7 @@ Using [**ZInit**](https://github.com/zdharma/zinit)
 Add the following to `.zshrc`
 
 ```bash
-zinit light jgogstad/passwordless-history
+zinit light jgogstad/zsh-mask
 ```
 
 Using [**ZPlug**](https://github.com/zplug/zplug)
@@ -80,7 +80,7 @@ Using [**ZPlug**](https://github.com/zplug/zplug)
 Add the following to `.zshrc`
 
 ```bash
-zplug 'jgogstad/passwordless-history'
+zplug 'jgogstad/zsh-mask'
 ```
 
 
