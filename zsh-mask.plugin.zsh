@@ -18,7 +18,7 @@ function zshaddhistory() {
     if [[ $#nonempty -gt 0 ]]; then
       for m in "$nonempty[@]"; do
         n="${m##[\"\']}"
-        input="${input/${n%%[\"\']}/...}"
+        input="${input//${n%%[\"\']}/...}"
       done
 
       print -Sr -- "$input"
