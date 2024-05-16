@@ -83,6 +83,16 @@ Add the following to `.zshrc`
 zplug 'jgogstad/zsh-mask'
 ```
 
+Using [**Oh My Zsh**](https://ohmyz.sh/)
+
+`git clone https://github.com/jgogstad/zsh-mask ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-mask`
+
+Add the following to `.zshrc`
+
+```bash
+plugins=(zsh-mask)
+```
+
 
 ## Customization
 
