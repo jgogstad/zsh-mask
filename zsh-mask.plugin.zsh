@@ -1,6 +1,7 @@
 #!/bin/env zsh
 
-HISTORY_EXCLUDE_PATTERN='^ |//([^/]+:[^/]+)@|KEY[=:] *([^ ]+)|TOKEN[=:] *([^ ]+)|BEARER[=:] *([^ ]+)|PASSWO?R?D?[=:] *([^ ]+)|Authorization[=:] *([^'"'"'\"]+)|-us?e?r? ([^:]+:[^:]+) '
+HISTORY_EXCLUDE_PATTERN='^ |//(?:\$[^ ]*)?([^/]+:[^/]+)?@|KEY[=:] *(?:\$[^ ]*)?([^ ]+)?|TOKEN[=:] *(?:\$[^ ]*)?([^ ]+)?|BEARER[=:] *(?:\$[^ ]*)?([^ ]+)?|PASSWO?R?D?[=:] *(?:\$[^ ]*)?([^ ]+)?|Authorization[=:] *(?:\$[^ ]*)?([^ ]+)?|-us?e?r? (?:\$[^ ]*)?([^:]+:[^:]+)? '
+
 
 # See
 # - https://zsh.sourceforge.io/Doc/Release/Functions.html for docs on zshaddhistory
@@ -8,6 +9,7 @@ HISTORY_EXCLUDE_PATTERN='^ |//([^/]+:[^/]+)@|KEY[=:] *([^ ]+)|TOKEN[=:] *([^ ]+)
 function zshaddhistory() {
   emulate -L zsh
   unsetopt case_match
+  setopt localoptions rematch_pcre
 
   input="${1%%$'\n'}"
   if ! [[ "$input" =~ "$HISTORY_EXCLUDE_PATTERN" ]]; then
