@@ -24,6 +24,9 @@ function zshaddhistory() {
       done
 
       print -Sr -- "$input"
+    else
+      unset match
+      return 0
     fi
     unset match
     return 1
